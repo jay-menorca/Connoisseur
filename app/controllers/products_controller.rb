@@ -3,8 +3,10 @@ require 'open-uri'
 class ProductsController < ApplicationController
 
 	def index
-		products_json = open('http://lcboapi.com/products?page=50').read
+		#products_json = open('http://lcboapi.com/products?page=1').read
+		products_json = open('http://lcboapi.com/products').read
 		@products = JSON.parse(products_json)
+		@tot_count = @products.length
 	end
 
 	def show

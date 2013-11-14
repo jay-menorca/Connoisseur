@@ -1,3 +1,5 @@
+<p>Total count: <%= @tot_count%></p>
+	
 <% @products['result'].each do |prod| %>
 	<section>
 		<%= link_to prod['name'], product_path(prod['id'])%>
