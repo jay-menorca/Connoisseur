@@ -1,0 +1,7 @@
+<% @products['result'].each do |prod| %>
+	<section>
+		<%= link_to prod['name'], product_path(prod['id'])%>
+		<%= prod['price_in_cents']%>
+		<%= prod['primary_category']%>
+	</section>
+<% end %>
